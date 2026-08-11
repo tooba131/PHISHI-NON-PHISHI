@@ -1,0 +1,50 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# Models and large artifacts
+*.h5
+*.keras
+*.pkl
+*.weights*
+*.bin
+*.pt
+*.pth
+
+# Logs and temporary files
+*.log
+*.tmp
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+
+# Local environment files
+.env
+.env.*
+
+# Large local project assets and datasets
+myenv/
+saved models/
+Data/
+linear_1d_resnetse.ipynb
+linear-1d-resnetse.ipynb
+Untitled.ipynb
+t.csv*
+
