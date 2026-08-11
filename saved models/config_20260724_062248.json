@@ -1,0 +1,60 @@
+{
+  "SEED": 42,
+  "VOCAB_SIZE": 316,
+  "MAX_LEN": 250,
+  "EMBED_DIM": 64,
+  "BATCH_SIZE": 128,
+  "EPOCHS": 40,
+  "label_smoothing": 0.05,
+  "L2_RATE": 0.0005,
+  "SE_RATIO": 16,
+  "framework": "tensorflow.keras",
+  "tokenizer_level": "character",
+  "input_column": "Char_URL",
+  "preprocessing": "clean_url -> sanitize_url -> to_char_stream",
+  "selection_metric": "val_auc",
+  "loss_function": "binary_crossentropy",
+  "class_weights_train": {
+    "0": 0.7060826112088402,
+    "1": 1.713105746931044
+  },
+  "OPTIMAL_THRESHOLD": 0.3082025349140167,
+  "DEFAULT_THRESHOLD": 0.5,
+  "total_params": 2371841,
+  "train_samples": 564345,
+  "val_samples": 141087,
+  "test_samples": 184432,
+  "architecture": "Linear_1D_ResNetSE_2p4M",
+  "residual_blocks": [
+    {
+      "filters": 64,
+      "kernel_size": 7
+    },
+    {
+      "filters": 128,
+      "kernel_size": 5
+    },
+    {
+      "filters": 256,
+      "kernel_size": 3
+    },
+    {
+      "filters": 512,
+      "kernel_size": 3
+    }
+  ],
+  "dense_head": [
+    384,
+    192
+  ],
+  "dropout_rates": [
+    0.4,
+    0.3
+  ],
+  "spatial_dropout": 0.25,
+  "results": {
+    "val_accuracy": 0.9599452614784241,
+    "val_loss": 0.20606926083564758,
+    "val_auc": 0.9885633587837219
+  }
+}
